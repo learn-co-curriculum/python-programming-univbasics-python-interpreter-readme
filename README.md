@@ -1,6 +1,6 @@
 # Introduction to IRB
 
-## Objectives
+## Learning Goals
 
 1. Define IRB
 2. Identify REPLs
@@ -18,19 +18,25 @@ computer and start talking to it.
 ![Engineer Montgomery Scott Attempts Communication with a 20th Century
 Computer](https://media.giphy.com/media/3o7btVRbshbbaC8Ygg/source.gif)
 
-We run a program that's a "conversation room." In it we offer _expressions_ for
-Ruby to _evaluate_ and to which it will offer _return values_, or responses.
+Instead, we run a program that's a "conversation room." In it we send _expressions_ for
+Ruby to _evaluate_. After Ruby evaluates the _expression_, it will send back
+_return values_, or responses.
 
 ## Define IRB
 
 IRB stands for "Interactive Ruby." It's a like a room especially built for
-having conversations with Ruby. Programs like IRB are known as "REPLs." IRB is
-run from within your computer's terminal.
+having conversations with Ruby. We can think of it as your Ruby playground.
+IRB is run from within your computer's terminal by typing `irb`. Once IRB is
+running, we key in Ruby _expressions_ and hit ENTER. Afterward we'll see Ruby's
+evaluation of the _expression_ (the _return value_).
 
-IRB is _not_ a file where you save your work. Any coding you do in the IRB
-console in your terminal will not get saved anywhere. It only exists
-temporarily. IRB is for testing, playing, manipulating your code so that you
-understand it better and solve problems with it.
+Programs like IRB are known as "REPLs." "REPL" stands for _Read–Evaluate–Print
+Loop_. Many languages feature REPLs: Python, Ruby, Lisp and others. We'll talk
+more about REPLs in the next section.
+
+> **IMPORTANT**: IRB is _not_ a file where you save your work. Any coding you
+> do in IRB will not get saved. It only exists temporarily. IRB is for testing
+> and playing with code.
 
 ## Identify REPLs
 
@@ -55,22 +61,24 @@ IRB, as a REPL, gives you a place where:
 
 Sometimes we want to see how code works. Instead of having to build a brand new
 program (in a file), load up all the libraries, blah, blah, blah, IRB is a
-quick "laboratory" where we can see how something works.
+quick "laboratory" where we can see how something works. This is usually better
+than looking at the docs or writing a Stack Overflow post. With just a simple
+bit of test data we can _verify_ we understand how a line of code is working.
 
 Think about a car: it's a complex machine with many interacting parts. But if
 your car won't start you might "isolate" the battery and hook it up to a
 battery tester. If the battery tester shows the battery is good, then you know
-that the problem is somewhere else; if the battery is dead, then you know right
-what to do.
+that the problem is somewhere else; if the battery is dead, then you have
+_verified_ that the battery is the problem with your car.
 
 That process is known as _debugging_ when applied to computers or
-_troubleshooting_ when applied to pretty much everything else.
+_troubleshooting_ when applied to pretty much everything else. At the risk of
+sounding mystical, debugging is a skill shared by all makers: guitarists to
+brewers, to chefs, to programmers. From Neal Stephenson's _Cryptonomicon_:
 
 > Randy counts four men in addition to Amy and the pilot...  All of them are
 > fiddling around with engines or diving gear in a way Randy recognizes,
 > through many cultural and technological barriers, as debugging.
-
-From Neal Stephenson's _Cryptonomicon_
 
 ## Access and Exit IRB Via Your Terminal
 
@@ -79,8 +87,8 @@ _expressions_ into IRB and see the read-evaluate-print-loop for ourselves.
 
 ### Instructions
 
-1. Open up your terminal. (If you do not have a terminal on your computer you
-   can use [repl.it][repl])
+1. Open up a terminal. You can launch the Learn Sandbox and use the terminal at
+   the bottom.
 
 2. Type `irb` and hit `return`
 
@@ -103,13 +111,15 @@ Session](https://curriculum-content.s3.amazonaws.com/programming-univbasics/irb-
 
 Congratulations! You've had a conversation with Ruby! Ruby is a good
 conversationalist and waits for you to issue an _expression_. Ruby _evaluates_
-this expression and returns its interpretation of your expression. For
-`Time.now`, Ruby looks at your computer's clock and _returns_ the time. For
+this expression and returns its interpretation of your expression: a _response_
+or _return value_.
+
+For `Time.now`, Ruby looks at your computer's clock and _returns_ the time. For
 `255 / 5` it evaluates your expression's use of the division _operator_ (more
 on them later) and does some mathematics to produce `51`. Similarly, the `**`
 means "use what comes after me as an exponent to what's in front of me" and
-returns `81`.  Lastly the `puts` expression means "print something, in this
-case, `hello world`.
+returns `81` (it's the same as <pre>9<sup>2</sup></pre>).  Lastly, the `puts`
+expression means "print something, in this case, `hello world`.
 
 ### Typographical Conventions
 
@@ -123,7 +133,7 @@ The `#` in Ruby is a comment character and everything after it is ignored. The
 `#=>` is simply a tool to help you "imagine" what IRB might do with the
 expression.
 
-In our example we would write:
+Ruby documentation would frequently look like:
 
 - `Time.now #=> 2019-03-26 14:00:27 -0400`
 - `255 / 5 #=> 51`
@@ -138,8 +148,13 @@ but _not_ include it (or anything after it until the end of the line).
 
 #### Ofsetting Code
 
-Also whenever we're writing a word of Ruby code or a value that Ruby returns we
-put it in `this typeface`. So while "9 times 9 is 81", `9 * 9 #=> 81`. This
+Whenever we're writing a word of Ruby code or a value that Ruby returns we put
+it in `this typeface`. So while "9 times 9 is 81", `9 * 9 #=> 81`. This
 convention should make code things "pop out" for your eye.
 
-[repl]: https://repl.it/
+## Conclusion
+
+As we get into more complex code, sometimes we need a quick scratch pad to work
+in to test a bit of code out. IRB is great for this purpose. We can use it to
+learn about unfamiliar keywords, calculate equations, and, in general, become
+more comfortable writing in Ruby.
