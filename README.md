@@ -126,14 +126,14 @@ expression means "print something, in this case, `hello world`.
 #### Showing Return Value
 
 As you saw in that last section, it was kind of annoying to read the return
-values as separated from their _expression_. By convention, Rubyists sometimes
-document a return value _next to_ an expression as separated by `#=>`.
+values as separated from their _expression_. When it's helpful, Rubyists like to
+document a return value _next to_ its expression with `#=>`.
 
 The `#` in Ruby is a comment character and everything after it is ignored. The
 `#=>` is simply a tool to help you "imagine" what IRB might do with the
 expression.
 
-Ruby documentation would frequently look like:
+Ruby documentation frequently looks like:
 
 - `Time.now #=> 2019-03-26 14:00:27 -0400`
 - `255 / 5 #=> 51`
@@ -146,7 +146,7 @@ Ruby documentation would frequently look like:
 If you wanted to put one of these examples in IRB, you'd copy up to the `#=>`
 but _not_ include it (or anything after it until the end of the line).
 
-#### Ofsetting Code
+#### Offsetting Code
 
 Whenever we're writing a word of Ruby code or a value that Ruby returns we put
 it in `this typeface`. So while "9 times 9 is 81", `9 * 9 #=> 81`. This
