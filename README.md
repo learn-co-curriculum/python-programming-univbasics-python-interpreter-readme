@@ -118,7 +118,7 @@ For `Time.now`, Ruby looks at your computer's clock and _returns_ the time. For
 `255 / 5` it evaluates your expression's use of the division _operator_ (more
 on them later) and does some mathematics to produce `51`. Similarly, the `**`
 means "use what comes after me as an exponent to what's in front of me" and
-returns `81` (it's the same as <pre>9<sup>2</sup></pre>).  Lastly, the `puts`
+returns `81` (it's the same as 9<sup>2</sup>).  Lastly, the `puts`
 expression means "print something, in this case, `hello world`.
 
 ### Typographical Conventions
